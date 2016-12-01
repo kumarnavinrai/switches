@@ -1,0 +1,69 @@
+<ion-view view-title="Edit Info">
+  <ion-content>
+    <h1>Edit Info {{msg}}</h1>
+
+    <form name="myForm" ng-submit="saveEditInfo()" novalidate>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Title Of App</span>
+          <input type="text" name="title" ng-model="loginData.title" required>
+        </label>
+        <p class="err" ng-show="myForm.title.$error.required">* Title Required</p>
+        
+        
+   
+        <label class="item item-input">
+          <span class="input-label">Heading One</span>
+          <input type="text" name="headingone" ng-model="loginData.headingone" required>
+        </label>
+        <p class="err" ng-show="myForm.headingone.$error.required">* Heading One Required</p>
+        
+        <label class="item item-input">
+          <span class="input-label">Heading Two</span>
+          <input type="text" name="headingtwo" ng-model="loginData.headingtwo" required>
+        </label>
+        <p class="err" ng-show="myForm.headingtwo.$error.required">* Heading Two Required</p>
+        
+        <label class="item item-input">
+          <span class="input-label">Heading Three</span>
+          <input type="text" name="headingthree" ng-model="loginData.headingthree" required>
+        </label>
+        <p class="err" ng-show="myForm.headingthree.$error.required">* Heading Three Required</p>
+
+        <label class="item item-input">
+          <span class="input-label">Heading Four</span>
+          <input type="text" name="headingfour" ng-model="loginData.headingfour" required>
+        </label>
+        <p class="err" ng-show="myForm.headingfour.$error.required">* Heading Four Required</p>
+
+        <label class="item item-input">
+          <span class="input-label">Heading Five</span>
+          <input type="text" name="headingfive" ng-model="loginData.headingfive" required>
+        </label>
+        <p class="err" ng-show="myForm.headingfive.$error.required">* Heading Five Required</p>
+
+        <label class="item item-input">
+          <span class="input-label">Heading Six</span>
+          <input type="text" name="headingsix" ng-model="loginData.headingsix" required>
+        </label>
+        <p class="err" ng-show="myForm.headingsix.$error.required">* Heading Six Required</p>
+
+        <label class="item item-input">
+          <span class="input-label">Heading Seven</span>
+          <input type="text" name="headingseven" ng-model="loginData.headingseven" required>
+        </label>
+        <p class="err" ng-show="myForm.headingseven.$error.required">* Heading Seven Required</p>
+
+        <label class="item item-input">
+          <span class="input-label">Heading Eight</span>
+          <input type="text" name="headingeight" ng-model="loginData.headingeight" required>
+        </label>
+        <p class="err" ng-show="myForm.headingeight.$error.required">* Heading Eight Required</p>
+
+        <label class="item">
+          <button class="button button-block button-positive" ng-disabled="myForm.$invalid" type="submit">Save</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
