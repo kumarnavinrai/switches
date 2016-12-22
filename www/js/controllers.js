@@ -41,10 +41,27 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope,$http) {
+.controller('PlaylistsCtrl', function($scope,$http,$interval) {
   console.log("i am playlist");
-  $scope.title = window.localStorage.getItem("title");
-  if($scope.title === null){$scope.title = 'Navin IOT';}
+  
+  var currdate = new Date();
+  $scope.title = currdate;
+  $interval(function(){
+    currdate = new Date();
+    $scope.title = currdate;
+    $scope.title = $scope.title.toLocaleTimeString('en-US');
+    
+    var d=new Date("2016-12-22 03:36:50 PM");
+    var difference = currdate.getTime()-d.getTime()
+    console.log(currdate.getTime()-d.getTime());
+    if(difference > 0)
+    {
+      //document.write(d.getTime() + " milliseconds since 1970/01/01"+ "----" + $scope.title + "----" + $scope.title+"---");
+    }
+  }, 1000)
+  
+  /*$scope.title = window.localStorage.getItem("title");
+  if($scope.title === null){$scope.title = 'Navin IOT';}*/
   
   $scope.headingone = window.localStorage.getItem("headingone");  
   if($scope.headingone === null){$scope.headingone = 'Switch One';}
@@ -73,7 +90,7 @@ angular.module('starter.controllers', [])
   $scope.switchOn = function (param) {
         var s = 'navin';
         window.localStorage.setItem("switchone", s);
-        $scope.onurl = 'http://192.168.43.167/?pin=ON'+param;        
+        $scope.onurl = 'http://192.168.43.167/?pin=OFF'+param;        
         $http.get($scope.onurl)
         .success(function(data) {
             
@@ -88,7 +105,7 @@ angular.module('starter.controllers', [])
 
     $scope.switchOff = function (param) {
           
-        $scope.offurl = 'http://192.168.43.167/?pin=OFF'+param;    
+        $scope.offurl = 'http://192.168.43.167/?pin=ON'+param;    
         
         $http.get($scope.offurl)
         .success(function(data) {
