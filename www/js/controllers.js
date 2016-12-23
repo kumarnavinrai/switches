@@ -51,7 +51,7 @@ angular.module('starter.controllers', [])
     $scope.title = currdate;
     $scope.title = $scope.title.toLocaleTimeString('en-US');
     
-    var d=new Date("2016-12-22 03:36:50 PM");
+    var d=new Date("2016-12-23 03:36:50 PM");
     var difference = currdate.getTime()-d.getTime()
     console.log(currdate.getTime()-d.getTime());
     if(difference > 0)
@@ -119,8 +119,24 @@ angular.module('starter.controllers', [])
     };
   
 })
-.controller('EditInfoCtrl', function($scope, $ionicModal, $timeout) {
+.controller('EditInfoCtrl', function($scope, $ionicModal, $timeout, $interval) {
     // Perform the login action when the user submits the login form
+
+     var currdate = new Date();
+      $scope.title = currdate;
+      $interval(function(){
+        currdate = new Date();
+        $scope.title = currdate;
+        $scope.title = $scope.title.toLocaleTimeString('en-US');
+        
+        var d=new Date("2016-12-23 03:36:50 PM");
+        var difference = currdate.getTime()-d.getTime()
+        console.log(currdate.getTime()-d.getTime());
+        if(difference > 0)
+        {
+          //document.write(d.getTime() + " milliseconds since 1970/01/01"+ "----" + $scope.title + "----" + $scope.title+"---");
+        }
+      }, 1000);
 
       $scope.loginData.title = window.localStorage.getItem("title");
       if($scope.loginData.title === null){$scope.loginData.title = 'Navin IOT';}
@@ -186,6 +202,26 @@ angular.module('starter.controllers', [])
         window.location.reload();
       }, 1000);
     };
+})
+.controller('TimerCtrl', function($scope, $stateParams, $timeout, $interval) {
+    var currdate = new Date();
+      $scope.title = currdate;
+      $interval(function(){
+        currdate = new Date();
+        $scope.title = currdate;
+        $scope.title = $scope.title.toLocaleTimeString('en-US');
+        
+        var d=new Date("2016-12-23 03:36:50 PM");
+        var difference = currdate.getTime()-d.getTime()
+        console.log(currdate.getTime()-d.getTime());
+        if(difference > 0)
+        {
+          //document.write(d.getTime() + " milliseconds since 1970/01/01"+ "----" + $scope.title + "----" + $scope.title+"---");
+        }
+      }, 1000);
+
+
+
 })
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
