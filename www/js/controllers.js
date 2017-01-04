@@ -221,6 +221,68 @@ angular.module('starter.controllers', [])
       }, 1000);
 
 
+      console.log("i am timer");
+ 
+  
+  /*$scope.title = window.localStorage.getItem("title");
+  if($scope.title === null){$scope.title = 'Navin IOT';}*/
+  
+  $scope.headingone = window.localStorage.getItem("headingone");  
+  if($scope.headingone === null){$scope.headingone = 'Switch One';}
+
+  $scope.headingtwo = window.localStorage.getItem("headingtwo");  
+  if($scope.headingtwo === null){$scope.headingtwo = 'Switch Two';}
+
+  $scope.headingthree = window.localStorage.getItem("headingthree");  
+  if($scope.headingthree === null){$scope.headingthree = 'Switch Three';}
+
+  $scope.headingfour = window.localStorage.getItem("headingfour");  
+  if($scope.headingfour === null){$scope.headingfour = 'Switch Four';}
+
+  $scope.headingfive = window.localStorage.getItem("headingfive");  
+  if($scope.headingfive === null){$scope.headingfive = 'Switch Five';}
+
+  $scope.headingsix = window.localStorage.getItem("headingsix");  
+  if($scope.headingsix === null){$scope.headingsix = 'Switch Six';}
+
+  $scope.headingseven = window.localStorage.getItem("headingseven");  
+  if($scope.headingseven === null){$scope.headingseven = 'Switch Seven';}
+
+  $scope.headingeight = window.localStorage.getItem("headingeight");  
+  if($scope.headingeight === null){$scope.headingeight = 'Switch Eight';}
+
+  $scope.switchOn = function (param) {
+        var s = 'navin';
+        window.localStorage.setItem("switchone", s);
+        $scope.onurl = 'http://192.168.43.167/?pin=OFF'+param;        
+        $http.get($scope.onurl)
+        .success(function(data) {
+            
+            console.log('switch on');
+        })
+        .error(function(data) {
+            
+            console.log('Error: ' + data);
+        });
+        console.log('nothing on');
+    };
+
+    $scope.switchOff = function (param) {
+          
+        $scope.offurl = 'http://192.168.43.167/?pin=ON'+param;    
+        
+        $http.get($scope.offurl)
+        .success(function(data) {
+             console.log('switch on');
+        })
+        .error(function(data) {
+           
+            console.log('Error: ' + data);
+        });
+        console.log('nothing off');
+    };
+
+
 
 })
 .controller('PlaylistCtrl', function($scope, $stateParams) {
