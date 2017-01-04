@@ -49,7 +49,7 @@
 						  </select>
 						</div>
 						
-						<div class="select-style">
+						<div class="select-style sukh-select">
 						  <select>
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
@@ -125,6 +125,12 @@
 			<div class="row custrow">
 			        <div class="col-md-12">
 			        	<h2>{{headingtwo}}</h2>
+			        	<select name="cars" multiple>
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="opel">Opel</option>
+						  <option value="audi">Audi</option>
+						</select>
 			            <button type="button" ng-click="switchOn(2)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>No</button>
 			            <button type="button" ng-click="switchOff(2)" class="btn btn-labeled btn-danger">
@@ -208,6 +214,12 @@
 			.select-style select:focus {
 			    outline: none;
 			}
+			.select-style.sukh-select{
+				margin-top: -33px;
+				margin-left: 68px;
+				margin-bottom: 15px; 
+			}
+			.btn-success:active{color: #000000;}
 		</style>
     </ion-list>
   </ion-content>
