@@ -216,7 +216,7 @@ angular.module('starter.controllers', [])
         console.log(currdate.getTime()-d.getTime());
         if(difference > 0)
         {
-          alert("navin");
+          //alert("navin");
           //document.write(d.getTime() + " milliseconds since 1970/01/01"+ "----" + $scope.title + "----" + $scope.title+"---");
         }
       }, 5000);
@@ -254,6 +254,8 @@ angular.module('starter.controllers', [])
 
 
   $scope.switchSet = function (param) {
+        var currentItem = this.hhs1;
+        console.log(currentItem);
         console.log($scope.hhs1);
         console.log(param);
         var s = 'navin';
