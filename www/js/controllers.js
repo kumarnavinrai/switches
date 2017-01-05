@@ -203,7 +203,26 @@ angular.module('starter.controllers', [])
       }, 1000);
     };
 })
-.controller('TimerCtrl', function($scope, $stateParams, $timeout, $interval) {
+.controller('TimerCtrl', function($scope, $stateParams, $timeout, $interval, $http) {
+
+    $scope.hhs1 = 'hh';
+    $scope.hhs2 = 'hh';
+    $scope.hhs3 = 'hh';
+    $scope.hhs4 = 'hh';
+    $scope.hhs5 = 'hh';
+    $scope.hhs6 = 'hh';
+    $scope.hhs7 = 'hh';
+    $scope.hhs8 = 'hh';
+
+    $scope.mms1 = 'mm';
+    $scope.mms2 = 'mm';
+    $scope.mms3 = 'mm';
+    $scope.mms4 = 'mm';
+    $scope.mms5 = 'mm';
+    $scope.mms6 = 'mm';
+    $scope.mms7 = 'mm';
+    $scope.mms8 = 'mm';
+
     var currdate = new Date();
       $scope.title = currdate;
       $interval(function(){
@@ -252,10 +271,135 @@ angular.module('starter.controllers', [])
   $scope.headingeight = window.localStorage.getItem("headingeight");  
   if($scope.headingeight === null){$scope.headingeight = 'Switch Eight';}
 
+  $scope.switch1hSet = function() {
+    var currentItem = this.hhs1;
+    $scope.hhs1 = currentItem;
+  };
 
-  $scope.switchSet = function (param) {
-        var currentItem = this.hhs1;
-        console.log(currentItem);
+  $scope.switch2hSet = function() {
+    var currentItem = this.hhs2;
+    $scope.hhs2 = currentItem;
+  };
+
+  $scope.switch3hSet = function() {
+    var currentItem = this.hhs3;
+    $scope.hhs3 = currentItem;
+  };
+
+  $scope.switch4hSet = function() {
+    var currentItem = this.hhs4;
+    $scope.hhs4 = currentItem;
+  };
+
+  $scope.switch5hSet = function() {
+    var currentItem = this.hhs5;
+    $scope.hhs5 = currentItem;
+  };
+
+  $scope.switch6hSet = function() {
+    var currentItem = this.hhs6;
+    $scope.hhs6 = currentItem;
+  };
+
+  $scope.switch7hSet = function() {
+    var currentItem = this.hhs7;
+    $scope.hhs7 = currentItem;
+  };
+
+  $scope.switch8hSet = function() {
+    var currentItem = this.hhs8;
+    $scope.hhs8 = currentItem;
+  };
+
+  $scope.switch1mSet = function() {
+    var currentItem = this.mms1;
+    $scope.mms1 = currentItem;
+  };
+
+  $scope.switch2mSet = function() {
+    var currentItem = this.mms2;
+    $scope.mms2 = currentItem;
+  };
+
+  $scope.switch3mSet = function() {
+    var currentItem = this.mms3;
+    $scope.mms3 = currentItem;
+  };
+
+  $scope.switch4mSet = function() {
+    var currentItem = this.mms4;
+    $scope.mms4 = currentItem;
+  };
+
+  $scope.switch5mSet = function() {
+    var currentItem = this.mms5;
+    $scope.mms5 = currentItem;
+  };
+
+  $scope.switch6mSet = function() {
+    var currentItem = this.mms6;
+    $scope.mms6 = currentItem;
+  };
+
+  $scope.switch7mSet = function() {
+    var currentItem = this.mms7;
+    $scope.mms7 = currentItem;
+  };
+
+  $scope.switch8mSet = function() {
+    var currentItem = this.mms8;
+    $scope.mms8 = currentItem;
+  };
+
+
+
+
+
+
+
+  $scope.switch1Set = function() {
+    console.log($scope.hhs1);
+    console.log($scope.mms1);
+        
+  };
+
+  $scope.switch2Set = function() {
+    console.log($scope.hhs2);
+    console.log($scope.mms2);
+  };
+
+  $scope.switch3Set = function() {
+    console.log($scope.hhs3);
+    console.log($scope.mms3);
+  };
+
+  $scope.switch4Set = function() {
+    console.log($scope.hhs4);
+    console.log($scope.mms4);
+  };
+
+  $scope.switch5Set = function() {
+    console.log($scope.hhs5);
+    console.log($scope.mms5);
+  };
+
+  $scope.switch6Set = function() {
+    console.log($scope.hhs6);
+    console.log($scope.mms6);
+  };
+
+  $scope.switch7Set = function() {
+    console.log($scope.hhs7);
+    console.log($scope.mms7);
+  };
+
+  $scope.switch8Set = function() {
+    console.log($scope.hhs8);
+    console.log($scope.mms8);
+  };
+
+  $scope.switchOn = function (param) {
+        
         console.log($scope.hhs1);
         console.log(param);
         var s = 'navin';
@@ -291,7 +435,7 @@ angular.module('starter.controllers', [])
 
 
 })
-.controller('AlarmInfoCtrl', function($scope, $ionicModal, $timeout, $interval) {
+.controller('AlarmInfoCtrl', function($scope, $ionicModal, $timeout, $interval, $http) {
     // Perform the login action when the user submits the login form
 
      var currdate = new Date();

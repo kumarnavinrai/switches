@@ -19,7 +19,7 @@
 			        	<h2>{{headingone}}</h2>
 			        
 			        	<div class="select-style">
-						  <select ng-model="hhs1" ng-change="switchSet()" >
+						  <select ng-model="hhs1" ng-change="switch1hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -50,7 +50,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms1" ng-change="switch1mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -124,7 +124,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchSet(1)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch1Set(1)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(1)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
@@ -134,7 +134,7 @@
 			        <div class="col-md-12">
 			        	<h2>{{headingtwo}}</h2>
 			        	<div class="select-style">
-						  <select>
+						  <select ng-model="hhs2" ng-change="switch2hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -165,7 +165,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms2" ng-change="switch2mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -239,7 +239,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchOn(2)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch2Set(2)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(2)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
@@ -249,7 +249,7 @@
 			        <div class="col-md-12">
 			        	<h2>{{headingthree}}</h2>
 			        	<div class="select-style">
-						  <select>
+						  <select ng-model="hhs3" ng-change="switch3hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -280,7 +280,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms3" ng-change="switch3mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -354,7 +354,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchOn(3)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch3Set(3)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(3)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
@@ -364,7 +364,7 @@
 			        <div class="col-md-12">
 			        	<h2>{{headingfour}}</h2>
 			        	<div class="select-style">
-						  <select>
+						  <select ng-model="hhs4" ng-change="switch4hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -395,7 +395,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms4" ng-change="switch4mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -469,7 +469,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchOn(4)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch4Set(4)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(4)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
@@ -479,7 +479,7 @@
 			        <div class="col-md-12">
 			        	<h2>{{headingfive}}</h2>
 			        	<div class="select-style">
-						  <select>
+						  <select ng-model="hhs5" ng-change="switch5hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -510,7 +510,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms5" ng-change="switch5mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -584,7 +584,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchOn(5)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch5Set(5)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(5)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
@@ -594,7 +594,7 @@
 			        <div class="col-md-12">
 			        	<h2>{{headingsix}}</h2>
 			        	<div class="select-style">
-						  <select>
+						  <select ng-model="hhs6" ng-change="switch6hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -625,7 +625,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms6" ng-change="switch6mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -699,7 +699,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchOn(6)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch6Set(6)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(6)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
@@ -709,7 +709,7 @@
 			        <div class="col-md-12">
 			        	<h2>{{headingseven}}</h2>
 			        	<div class="select-style">
-						  <select>
+						  <select ng-model="hhs7" ng-change="switch7hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -740,7 +740,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms7" ng-change="switch7mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -814,7 +814,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchOn(7)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch7Set(7)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(7)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
@@ -824,7 +824,7 @@
 			        <div class="col-md-12">
 			        	<h2>{{headingeight}}</h2>
 			        	<div class="select-style">
-						  <select>
+						  <select ng-model="hhs8" ng-change="switch8hSet()" >
 						  	<option value="hh">hh</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -855,7 +855,7 @@
 						</div>
 						
 						<div class="select-style sukh-select">
-						  <select>
+						  <select ng-model="mms8" ng-change="switch8mSet()" >
 						  	<option value="mm">mm</option>
 						    <option value="0">0</option>
 						    <option value="1">1</option>
@@ -929,7 +929,7 @@
 						    
 						  </select>
 						</div>
-			            <button type="button" ng-click="switchOn(8)" class="btn btn-labeled btn-success">
+			            <button type="button" ng-click="switch8Set(8)" class="btn btn-labeled btn-success">
 			                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>SET</button>
 			            <button type="button" ng-click="switchOff(8)" class="btn btn-labeled btn-danger">
 			                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>UNSET</button>
