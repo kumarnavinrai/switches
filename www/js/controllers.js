@@ -211,14 +211,15 @@ angular.module('starter.controllers', [])
         $scope.title = currdate;
         $scope.title = $scope.title.toLocaleTimeString('en-US');
         
-        var d=new Date("2016-12-23 03:36:50 PM");
+        var d=new Date("2017-01-05 02:27:00 PM");
         var difference = currdate.getTime()-d.getTime()
         console.log(currdate.getTime()-d.getTime());
         if(difference > 0)
         {
+          alert("navin");
           //document.write(d.getTime() + " milliseconds since 1970/01/01"+ "----" + $scope.title + "----" + $scope.title+"---");
         }
-      }, 1000);
+      }, 5000);
 
 
       console.log("i am timer");
@@ -251,9 +252,12 @@ angular.module('starter.controllers', [])
   $scope.headingeight = window.localStorage.getItem("headingeight");  
   if($scope.headingeight === null){$scope.headingeight = 'Switch Eight';}
 
-  $scope.switchOn = function (param) {
+
+  $scope.switchSet = function (param) {
+        console.log($scope.hhs1);
+        console.log(param);
         var s = 'navin';
-        window.localStorage.setItem("switchone", s);
+       /* window.localStorage.setItem("switchone", s);
         $scope.onurl = 'http://192.168.43.167/?pin=OFF'+param;        
         $http.get($scope.onurl)
         .success(function(data) {
@@ -264,7 +268,7 @@ angular.module('starter.controllers', [])
             
             console.log('Error: ' + data);
         });
-        console.log('nothing on');
+        console.log('nothing on');*/
     };
 
     $scope.switchOff = function (param) {
