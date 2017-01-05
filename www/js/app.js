@@ -51,6 +51,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+   .state('app.alarm', {
+      url: '/alarm',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/alarm.html',
+          controller: 'AlarmInfoCtrl'
+        }
+      }
+    })
     .state('app.playlists', {
       url: '/playlists',
       views: {

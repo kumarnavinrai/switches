@@ -285,5 +285,89 @@ angular.module('starter.controllers', [])
 
 
 })
+.controller('AlarmInfoCtrl', function($scope, $ionicModal, $timeout, $interval) {
+    // Perform the login action when the user submits the login form
+
+     var currdate = new Date();
+      $scope.title = currdate;
+      $interval(function(){
+        currdate = new Date();
+        $scope.title = currdate;
+        $scope.title = $scope.title.toLocaleTimeString('en-US');
+        
+        var d=new Date("2016-12-23 03:36:50 PM");
+        var difference = currdate.getTime()-d.getTime()
+        console.log(currdate.getTime()-d.getTime());
+        if(difference > 0)
+        {
+          //document.write(d.getTime() + " milliseconds since 1970/01/01"+ "----" + $scope.title + "----" + $scope.title+"---");
+        }
+      }, 1000);
+
+      $scope.loginData.title = window.localStorage.getItem("title");
+      if($scope.loginData.title === null){$scope.loginData.title = 'Navin IOT';}
+      
+      $scope.loginData.headingone = window.localStorage.getItem("headingone");  
+      if($scope.loginData.headingone === null){$scope.loginData.headingone = 'Switch One';}
+
+      $scope.loginData.headingtwo = window.localStorage.getItem("headingtwo");  
+      if($scope.loginData.headingtwo === null){$scope.loginData.headingtwo = 'Switch Two';}
+
+      $scope.loginData.headingthree = window.localStorage.getItem("headingthree");  
+      if($scope.loginData.headingthree === null){$scope.loginData.headingthree = 'Switch Three';}
+
+      $scope.loginData.headingfour = window.localStorage.getItem("headingfour");  
+      if($scope.loginData.headingfour === null){$scope.loginData.headingfour = 'Switch Four';}
+
+      $scope.loginData.headingfive = window.localStorage.getItem("headingfive");  
+      if($scope.loginData.headingfive === null){$scope.loginData.headingfive = 'Switch Five';}
+
+      $scope.loginData.headingsix = window.localStorage.getItem("headingsix");  
+      if($scope.loginData.headingsix === null){$scope.loginData.headingsix = 'Switch Six';}
+
+      $scope.loginData.headingseven = window.localStorage.getItem("headingseven");  
+      if($scope.loginData.headingseven === null){$scope.loginData.headingseven = 'Switch Seven';}
+
+      $scope.loginData.headingeight = window.localStorage.getItem("headingeight");  
+      if($scope.loginData.headingeight === null){$scope.loginData.headingeight = 'Switch Eight';}
+
+    $scope.saveEditInfo = function() {
+      console.log('Doing login', $scope.loginData);
+      var s = $scope.loginData.title;
+      window.localStorage.setItem("title", s);
+      
+      s = $scope.loginData.headingone;
+      window.localStorage.setItem("headingone", s);
+
+      s = $scope.loginData.headingtwo;
+      window.localStorage.setItem("headingtwo", s);
+
+      s = $scope.loginData.headingthree;
+      window.localStorage.setItem("headingthree", s);
+
+      s = $scope.loginData.headingfour;
+      window.localStorage.setItem("headingfour", s);
+
+      s = $scope.loginData.headingfive;
+      window.localStorage.setItem("headingfive", s);
+
+      s = $scope.loginData.headingsix;
+      window.localStorage.setItem("headingsix", s);
+
+      s = $scope.loginData.headingseven;
+      window.localStorage.setItem("headingseven", s);
+
+      s = $scope.loginData.headingeight;
+      window.localStorage.setItem("headingeight", s);
+
+      $scope.msg = "Success";
+      // Simulate a login delay. Remove this and replace with your login
+      // code if using a login system
+      $timeout(function() {
+        //$scope.closeLogin();
+        window.location.reload();
+      }, 1000);
+    };
+})
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
