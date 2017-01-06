@@ -43,6 +43,15 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope,$http,$interval) {
   console.log("i am playlist");
+
+  /*var monthNames = [ "1", "2", "3", "4", "5", "6",
+    "7", "8", "9", "10", "11", "12" ];
+  var currdate = new Date();
+       console.log(currdate.getDate());
+    console.log(monthNames[currdate.getMonth()]);
+    console.log(currdate.getFullYear());
+    console.log(currdate.getHours());
+    console.log(currdate.getMinutes());*/
   
   var currdate = new Date();
   $scope.title = currdate;
@@ -53,7 +62,14 @@ angular.module('starter.controllers', [])
     
     var d=new Date("2016-12-23 03:36:50 PM");
     var difference = currdate.getTime()-d.getTime()
-    console.log(currdate.getTime()-d.getTime());
+    //console.log(currdate.getTime()-d.getTime());
+    
+ /*   console.log(currdate.getDate());
+    console.log(monthNames[currdate.getMonth()]);
+    console.log(currdate.getFullYear());
+    console.log(currdate.getHours());
+    console.log(currdate.getMinutes());*/
+    
     if(difference > 0)
     {
       //document.write(d.getTime() + " milliseconds since 1970/01/01"+ "----" + $scope.title + "----" + $scope.title+"---");
@@ -205,23 +221,42 @@ angular.module('starter.controllers', [])
 })
 .controller('TimerCtrl', function($scope, $stateParams, $timeout, $interval, $http) {
 
-    $scope.hhs1 = 'hh';
-    $scope.hhs2 = 'hh';
-    $scope.hhs3 = 'hh';
-    $scope.hhs4 = 'hh';
-    $scope.hhs5 = 'hh';
-    $scope.hhs6 = 'hh';
-    $scope.hhs7 = 'hh';
-    $scope.hhs8 = 'hh';
+  var monthNames = [ "1", "2", "3", "4", "5", "6",
+    "7", "8", "9", "10", "11", "12" ];
+  var currdate = new Date();
+       console.log(currdate.getDate());
+    console.log(monthNames[currdate.getMonth()]);
+    console.log(currdate.getFullYear());
+    console.log(currdate.getHours());
+    console.log(currdate.getMinutes());
 
-    $scope.mms1 = 'mm';
-    $scope.mms2 = 'mm';
-    $scope.mms3 = 'mm';
-    $scope.mms4 = 'mm';
-    $scope.mms5 = 'mm';
-    $scope.mms6 = 'mm';
-    $scope.mms7 = 'mm';
-    $scope.mms8 = 'mm';
+    $scope.hhs1 = currdate.getHours().toString();
+    $scope.hhs2 = currdate.getHours().toString();
+    $scope.hhs3 = currdate.getHours().toString();
+    $scope.hhs4 = currdate.getHours().toString();
+    $scope.hhs5 = currdate.getHours().toString();
+    $scope.hhs6 = currdate.getHours().toString();
+    $scope.hhs7 = currdate.getHours().toString();
+    $scope.hhs8 = currdate.getHours().toString();
+
+    $scope.mms1 = currdate.getMinutes().toString();
+    $scope.mms2 = currdate.getMinutes().toString();
+    $scope.mms3 = currdate.getMinutes().toString();
+    $scope.mms4 = currdate.getMinutes().toString();
+    $scope.mms5 = currdate.getMinutes().toString();
+    $scope.mms6 = currdate.getMinutes().toString();
+    $scope.mms7 = currdate.getMinutes().toString();
+    $scope.mms8 = currdate.getMinutes().toString();
+
+    $scope.dds1 = currdate.getDate().toString();
+    $scope.mos1 = monthNames[currdate.getMonth()];
+    $scope.yos1 = currdate.getFullYear().toString();
+
+    $scope.onoffs1 = 'ON';
+
+    $scope.alarmset1 = window.localStorage.getItem("alarmset1");  
+    if($scope.alarmset1 === null){$scope.alarmset1 = 0;}
+    
 
     var currdate = new Date();
       $scope.title = currdate;
@@ -271,6 +306,8 @@ angular.module('starter.controllers', [])
   $scope.headingeight = window.localStorage.getItem("headingeight");  
   if($scope.headingeight === null){$scope.headingeight = 'Switch Eight';}
 
+
+/*  Setting up hours start */
   $scope.switch1hSet = function() {
     var currentItem = this.hhs1;
     $scope.hhs1 = currentItem;
@@ -311,6 +348,9 @@ angular.module('starter.controllers', [])
     $scope.hhs8 = currentItem;
   };
 
+  /*  Setting up hours ends */
+
+  /*  Setting up months start */
   $scope.switch1mSet = function() {
     var currentItem = this.mms1;
     $scope.mms1 = currentItem;
@@ -351,15 +391,62 @@ angular.module('starter.controllers', [])
     $scope.mms8 = currentItem;
   };
 
+  /*  Setting up months ends */
+ 
+ /*  Setting up on off start */
+  $scope.switch1onoffSet = function() {
+    var currentItem = this.onoffs1;
+    $scope.onoffs1 = currentItem;
+  };
+
+ /*  Setting up on off ends */ 
+
+/*  Setting up day start */
+  $scope.switch1dateSet = function() {
+    var currentItem = this.dds1;
+    $scope.dds1 = currentItem;
+  };
+
+/*  Setting up day ends */
 
 
+/*  Setting up month start */
+  $scope.switch1monthSet = function() {
+    var currentItem = this.mos1;
+    $scope.mos1 = currentItem;
+  };
 
 
+/*  Setting up month ends */
+ 
+
+/*  Setting up year start */
+
+  $scope.switch1yearSet = function() {
+    var currentItem = this.yos1;
+    $scope.yos1 = currentItem;
+  };
 
 
+/*  Setting up year ends */
+
+
+/*  Setting up switch start */
   $scope.switch1Set = function() {
+    /*console.log($scope.dds1);
+    console.log($scope.mos1);
+    console.log($scope.hhs1);
+    console.log($scope.yos1);
     console.log($scope.hhs1);
     console.log($scope.mms1);
+    console.log($scope.onoffs1);*/
+
+       /*var d=new Date("2017-01-05 02:27:00 PM");*/
+    var alarmdate1 = $scope.yos1 + "-" + $scope.mos1 + "-" + $scope.dds1 + " " + $scope.hhs1 + ":" + $scope.mms1 + ":00 " + $scope.onoffs1;
+    $scope.alarmset1 = "Alarm set on " + alarmdate1;
+    var s = $scope.alarmset1;
+    window.localStorage.setItem("alarmset1", s);
+    console.log(alarmdate1);    
         
   };
 
@@ -397,6 +484,10 @@ angular.module('starter.controllers', [])
     console.log($scope.hhs8);
     console.log($scope.mms8);
   };
+
+
+/*  Setting up switch ends */
+
 
   $scope.switchOn = function (param) {
         
