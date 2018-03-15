@@ -1,4 +1,5 @@
-Switches ionic 1 app
+#Switches ionic 1 app
+
 --git clone https://github.com/kumarnavinrai/switches.git
 
 --npm install
