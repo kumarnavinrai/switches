@@ -9,4 +9,4 @@ Switches ionic 1 app
 
 #Enjoy!!!
 
-#Code is 
+![alt txt](https://raw.githubusercontent.com/kumarnavinrai/switches/master/666.PNG)
